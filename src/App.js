@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CVHeader from "./components/CVHeader";
 import logoPath from "./assets/ResumeLogo.png";
 import "./App.css";
+import CVNav from "./components/CVNav";
 
 class App extends Component {
   constructor() {
@@ -13,8 +14,8 @@ class App extends Component {
       <div className="main">
         <CVHeader logo={logoPath} size={160} />
 
-        {/* <nav> contains reset, example, and print buttons */}
-        <nav></nav>
+        {/* <CVNav> contains reset, example, and print buttons */}
+        <CVNav />
 
         {/* <main> contains CV */}
         <main></main>

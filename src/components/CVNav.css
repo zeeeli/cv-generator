@@ -1,0 +1,29 @@
+/* ./src/components/CVNav.css */
+.cv-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  padding-top: 16px;
+  padding-left: 20px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  background-color: #93032e;
+  color: #f9f9f9;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f9f9f9;
+  border: 2px solid #93032e;
+  color: #93032e;
+}
