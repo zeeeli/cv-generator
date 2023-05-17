@@ -1,0 +1,13 @@
+/* ./src/components/CVHeader.css */
+.cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  color: #93032e;
+  width: 100%;
+  margin: inherit;
+  padding: inherit;
+  /* background-color: #837a75; */
+}
