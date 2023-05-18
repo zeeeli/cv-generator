@@ -11,4 +11,80 @@
   height: 1100px;
   border: 1px solid black;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  color: #5a5a5a;
+}
+
+.cv-wrapper > header {
+  height: 15%;
+  padding-left: 32px;
+  padding-bottom: 0px;
+  border-bottom: 10px solid #5a5a5a;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+
+.cv-wrapper > header > img {
+  height: 75%;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: inherit;
+  max-width: 580px;
+}
+
+::placeholder {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}
+
+#name-input {
+  color: inherit;
+  font-size: 36pt;
+  font-weight: bolder;
+}
+
+#job-input {
+  color: inherit;
+  font-size: 18pt;
+}
+
+section {
+  max-width: 90%;
+  align-self: center;
+}
+
+#contact-info {
+  display: flex;
+  gap: 10px;
+  padding-top: 24px;
+  padding-left: 12px;
+}
+
+#contact-info > div {
+  display: flex;
+  gap: 5px;
+}
+
+#contact-info > div > img {
+  width: 20px;
+  height: 20px;
+}
+
+#phone-input,
+#email-input,
+#location-input {
+  color: inherit;
+  font-size: 12pt;
+  max-width: 200px;
+}
+
+#phone-input {
+  max-width: 150px;
 }
