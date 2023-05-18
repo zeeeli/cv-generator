@@ -1,0 +1,14 @@
+/* ./src/components/CVMain.css */
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+  padding-left: 24px;
+}
+
+.cv-wrapper {
+  width: 850px;
+  height: 1100px;
+  border: 1px solid black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

@@ -3,6 +3,8 @@ import CVHeader from "./components/CVHeader";
 import logoPath from "./assets/ResumeLogo.png";
 import "./App.css";
 import CVNav from "./components/CVNav";
+import CVMain from "./components/CVMain";
+import CVFooter from "./components/CVFooter";
 
 class App extends Component {
   constructor() {
@@ -17,10 +19,12 @@ class App extends Component {
         {/* <CVNav> contains reset, example, and print buttons */}
         <CVNav />
 
-        {/* <main> contains CV */}
-        <main></main>
+        <span className="instruct">Click Element To Edit</span>
 
-        <footer></footer>
+        {/* <main> contains CV */}
+        <CVMain></CVMain>
+
+        <CVFooter></CVFooter>
       </div>
     );
   }
