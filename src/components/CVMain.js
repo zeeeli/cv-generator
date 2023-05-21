@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./CVMain.css";
+import CVFormInput from "./CVFormInput";
+import CVFormEdu from "./CVFormEdu";
 
 export default class CVMain extends Component {
   render() {
@@ -9,54 +11,48 @@ export default class CVMain extends Component {
           <header>
             <img src={require("../assets/default-profile.png")} alt="Profile" />
             <h2>
-              <input
-                type="text"
-                contentEditable="true"
-                placeholder={"First Last"}
+              <CVFormInput
+                defaultText="First Last"
                 id="name-input"
-                maxLength={21}
+                length={21}
               />
               <br></br>
-              <input
-                type="text"
-                contentEditable="true"
-                placeholder={"Job Title"}
-                id="job-input"
-                maxLength={23}
-              />
+              <CVFormInput defaultText="Job Title" id="job-input" length={23} />
             </h2>
           </header>
           <section id="contact-info">
             <div>
               <img src={require("../assets/phone.png")} alt="Phone number" />
-              <input
-                type="text"
-                contentEditable="true"
-                placeholder={"+1 (xxx) xxx-xxxx"}
+              <CVFormInput
+                defaultText="+1 (xxx) xxx-xxxx"
                 id="phone-input"
-                maxLength={17}
+                length={17}
               />
             </div>
             <div>
-              <img src={require("../assets/mail.png")} alt="Phone number" />
-              <input
-                type="text"
-                contentEditable="true"
-                placeholder={"example@example.com"}
+              <img src={require("../assets/mail.png")} alt="email" />
+              <CVFormInput
+                defaultText="example@example.com"
                 id="email-input"
-                maxLength={33}
+                length={25}
               />
             </div>
             <div>
-              <img src={require("../assets/location.png")} alt="Phone number" />
-              <input
-                type="text"
-                contentEditable="true"
-                placeholder={"City, State, Country"}
+              <img src={require("../assets/location.png")} alt="location" />
+              <CVFormInput
+                defaultText="City, State, Country"
                 id="location-input"
-                maxLength={20}
+                length={20}
               />
             </div>
+          </section>
+          <section id="about-me">
+            <h3>About Me</h3>
+            <textarea rows={6} placeholder="..." id="about-input" />
+          </section>
+          <CVFormEdu />
+          <section id="work">
+            <h3>Work Experience</h3>
           </section>
         </div>
       </main>

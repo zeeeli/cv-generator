@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   color: #5a5a5a;
+  background-color: #fff;
 }
 
 .cv-wrapper > header {
@@ -56,14 +57,15 @@ input[type="text"] {
 }
 
 section {
-  max-width: 90%;
+  width: 75%;
+  max-width: 75%;
+  padding-top: 28px;
   align-self: center;
 }
 
 #contact-info {
   display: flex;
   gap: 10px;
-  padding-top: 24px;
   padding-left: 12px;
 }
 
@@ -87,4 +89,80 @@ section {
 
 #phone-input {
   max-width: 150px;
+}
+
+#about-me {
+  height: 15%;
+}
+#about-input {
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  resize: none;
+  width: 91%;
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  font-size: 12pt;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+h3 {
+  font-size: 16pt;
+  font-weight: bold;
+  color: inherit;
+  width: 95%;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #5a5a5a;
+}
+
+#education,
+#work-experience {
+  min-height: 15%;
+}
+
+#edu-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#add-edu,
+#remove-edu {
+  cursor: pointer;
+}
+
+#add-edu:hover,
+#remove-edu:hover {
+  background-color: #e7e7e7;
+  border-radius: 16px;
+}
+
+#edu-body {
+  padding-top: 8px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 120px;
+  width: 600px;
+  max-width: 600px;
+}
+
+#edu-body > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 12px;
+}
+
+#degree-name {
+  font-size: 14pt;
+  color: inherit;
+  font-weight: bold;
+}
+
+#insti-name,
+#years {
+  font-size: 11pt;
+  color: inherit;
 }
