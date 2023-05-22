@@ -5,7 +5,7 @@ export default class CVFormEdu extends Component {
   render() {
     return (
       <section id="education">
-        <h3 id="edu-header">
+        <h3 className="section-header">
           Education
           <img
             src={require("../assets/add.png")}
@@ -31,6 +31,7 @@ export default class CVFormEdu extends Component {
               length={28}
             />
             <CVFormInput defaultText="xxxx - xxxx" id="years" length={11} />
+            <CVFormInput defaultText="GPA" id="gpa" length={4} />
           </div>
           <div>
             <CVFormInput defaultText="Degree" id="degree-name" length={20} />
@@ -40,6 +41,7 @@ export default class CVFormEdu extends Component {
               length={28}
             />
             <CVFormInput defaultText="xxxx - xxxx" id="years" length={11} />
+            <CVFormInput defaultText="GPA" id="gpa" length={4} />
           </div>
           <div>
             <CVFormInput defaultText="Degree" id="degree-name" length={20} />
@@ -49,6 +51,7 @@ export default class CVFormEdu extends Component {
               length={28}
             />
             <CVFormInput defaultText="xxxx - xxxx" id="years" length={11} />
+            <CVFormInput defaultText="GPA" id="gpa" length={4} />
           </div>
         </div>
       </section>

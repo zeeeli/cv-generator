@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./CVMain.css";
 import CVFormInput from "./CVFormInput";
 import CVFormEdu from "./CVFormEdu";
+import CVFormWork from "./CVFormWork";
 
 export default class CVMain extends Component {
   render() {
@@ -51,9 +52,7 @@ export default class CVMain extends Component {
             <textarea rows={6} placeholder="..." id="about-input" />
           </section>
           <CVFormEdu />
-          <section id="work">
-            <h3>Work Experience</h3>
-          </section>
+          <CVFormWork />
         </div>
       </main>
     );
