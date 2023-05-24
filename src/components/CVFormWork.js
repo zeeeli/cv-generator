@@ -34,7 +34,11 @@ export default class CVFormWork extends Component {
               id="years-worked"
               length={25}
             />
-            <textarea rows={3} placeholder="Short description" id="job-input" />
+            <textarea
+              rows={3}
+              placeholder="Short description"
+              id="job-descript"
+            />
           </div>
           <div>
             <CVFormInput
@@ -47,7 +51,11 @@ export default class CVFormWork extends Component {
               id="years-worked"
               length={25}
             />
-            <textarea rows={3} placeholder="Short description" id="job-input" />
+            <textarea
+              rows={3}
+              placeholder="Short description"
+              id="job-descript"
+            />
           </div>
           <div>
             <CVFormInput
@@ -60,7 +68,11 @@ export default class CVFormWork extends Component {
               id="years-worked"
               length={25}
             />
-            <textarea rows={3} placeholder="Short description" id="job-input" />
+            <textarea
+              rows={3}
+              placeholder="Short description"
+              id="job-descript"
+            />
           </div>
         </div>
       </section>

@@ -3,14 +3,55 @@ import "./CVMain.css";
 import CVFormInput from "./CVFormInput";
 import CVFormEdu from "./CVFormEdu";
 import CVFormWork from "./CVFormWork";
+const imageTypes = ["jpg", "jpeg", "png", "svg"];
 
 export default class CVMain extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      profileSrc: require("../assets/default-profile.png"),
+    };
+
+    this.changeProfileSrc = this.changeProfileSrc.bind(this);
+  }
+
+  changeProfileSrc() {
+    let input = document.createElement("input");
+    input.type = "file";
+    input.onchange = (_) => {
+      if (input.files && input.files[0]) {
+        // get uploaded file extension
+        let ext = input.files[0].name.split(".").pop().toLowerCase();
+        // only change profile src with image upload
+        if (imageTypes.indexOf(ext) > -1) {
+          let reader = new FileReader();
+          reader.readAsDataURL(input.files[0]);
+          reader.onloadend = (event) => {
+            this.setState({
+              profileSrc: event.target.result,
+            });
+          };
+        } else {
+          this.setState({
+            profileSrc: require("../assets/default-profile.png"),
+          });
+        }
+      }
+    };
+    input.click();
+  }
+
   render() {
     return (
       <main className="main-wrapper">
         <div className="cv-wrapper">
           <header>
-            <img src={require("../assets/default-profile.png")} alt="Profile" />
+            <img
+              src={this.state.profileSrc}
+              alt="Profile"
+              onClick={this.changeProfileSrc}
+            />
             <h2>
               <CVFormInput
                 defaultText="First Last"

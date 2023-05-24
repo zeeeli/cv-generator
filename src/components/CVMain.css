@@ -30,6 +30,7 @@
 
 .cv-wrapper > header > img {
   height: 75%;
+  cursor: pointer;
 }
 
 input[type="text"] {
@@ -193,7 +194,7 @@ h3 {
   font-weight: bold;
 }
 
-#job-input {
+#job-descript {
   padding-right: 12px;
   resize: none;
   width: 91%;
@@ -203,4 +204,5 @@ h3 {
   font-size: 11pt;
   font-weight: normal;
   overflow: hidden;
+  color: #5a5a5a;
 }
