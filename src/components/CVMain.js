@@ -10,7 +10,7 @@ export default class CVMain extends Component {
     super(props);
 
     this.state = {
-      profileSrc: require("../assets/default-profile.png"),
+      profileSrc: require("../assets/user-profile.png"),
     };
 
     this.changeProfileSrc = this.changeProfileSrc.bind(this);
@@ -34,7 +34,7 @@ export default class CVMain extends Component {
           };
         } else {
           this.setState({
-            profileSrc: require("../assets/default-profile.png"),
+            profileSrc: require("../assets/user-profile.png"),
           });
         }
       }
