@@ -29,8 +29,12 @@ export default class CVFormEdu extends Component {
   render() {
     const children = [];
 
-    for (let i = 0; i < this.state.numChildren; i++)
-      children.push(<CVFormEduEntry />);
+    if (this.props.exampleClicked) {
+      children.push(<CVFormEduEntry />, <CVFormEduEntry />, <CVFormEduEntry />);
+    } else {
+      for (let i = 0; i < this.state.numChildren; i++)
+        children.push(<CVFormEduEntry />);
+    }
 
     return (
       <section id="education">
@@ -40,7 +44,11 @@ export default class CVFormEdu extends Component {
             src={require("../assets/add.png")}
             alt="plus symbol"
             id="add-edu"
-            style={{ width: 30, height: 30 }}
+            style={
+              this.props.exampleClicked
+                ? { display: "none" }
+                : { width: 30, height: 30 }
+            }
             title="Add to end"
             onClick={this.addChild}
           />
@@ -48,7 +56,11 @@ export default class CVFormEdu extends Component {
             src={require("../assets/remove.png")}
             alt="minus symbol"
             id="remove-edu"
-            style={{ width: 30, height: 30 }}
+            style={
+              this.props.exampleClicked
+                ? { display: "none" }
+                : { width: 30, height: 30 }
+            }
             title="Remove from end"
             onClick={this.removeChild}
           />

@@ -9,7 +9,7 @@ export default class CVFormInput extends Component {
           type="text"
           id={id}
           maxLength={length}
-          value={seed}
+          placeholder={seed}
           autoComplete="off"
         />
       );

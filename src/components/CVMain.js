@@ -3,7 +3,7 @@ import "./CVMain.css";
 import CVFormInput from "./CVFormInput";
 import CVFormEdu from "./CVFormEdu";
 import CVFormWork from "./CVFormWork";
-const imageTypes = ["jpg", "jpeg", "png", "svg"];
+const imageTypes = ["jpg", "jpeg", "png", "svg", "webp"];
 
 export default class CVMain extends Component {
   constructor(props) {
@@ -43,12 +43,17 @@ export default class CVMain extends Component {
   }
 
   render() {
+    let exampleClicked = this.props.exampleStatus;
     return (
       <main className="main-wrapper">
         <div className="cv-wrapper">
           <header>
             <img
-              src={this.state.profileSrc}
+              src={
+                exampleClicked
+                  ? require("../assets/Swedish-chef.webp")
+                  : this.state.profileSrc
+              }
               alt="Profile"
               onClick={this.changeProfileSrc}
             />
@@ -57,9 +62,15 @@ export default class CVMain extends Component {
                 defaultText="First Last"
                 id="name-input"
                 length={21}
+                seed={exampleClicked ? "John Smith" : ""}
               />
               <br></br>
-              <CVFormInput defaultText="Job Title" id="job-input" length={23} />
+              <CVFormInput
+                defaultText="Job Title"
+                id="job-input"
+                length={23}
+                seed={exampleClicked ? "Head Chef" : ""}
+              />
             </h2>
           </header>
           <section id="contact-info">
@@ -69,6 +80,7 @@ export default class CVMain extends Component {
                 defaultText="+1 (xxx) xxx-xxxx"
                 id="phone-input"
                 length={17}
+                seed={exampleClicked ? "+1 (123) 456-5555" : ""}
               />
             </div>
             <div>
@@ -77,6 +89,7 @@ export default class CVMain extends Component {
                 defaultText="example@example.com"
                 id="email-input"
                 length={25}
+                seed={exampleClicked ? "johnsmith@gmail.com" : ""}
               />
             </div>
             <div>
@@ -85,15 +98,24 @@ export default class CVMain extends Component {
                 defaultText="City, State, Country"
                 id="location-input"
                 length={20}
+                seed={exampleClicked ? "Los Angeles, CA, USA" : ""}
               />
             </div>
           </section>
           <section id="about-me">
             <h3>About Me</h3>
-            <textarea rows={6} placeholder="..." id="about-input" />
+            <textarea
+              rows={6}
+              placeholder={
+                exampleClicked
+                  ? "Professional Chef with 12 years of experience across broad and diverse clientele and staff. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin libero nunc consequat interdum varius. Netus et malesuadafames ac turpis. Venenatis lectus magna fringilla urna porttitor rhoncus dolor."
+                  : "..."
+              }
+              id="about-input"
+            />
           </section>
-          <CVFormEdu />
-          <CVFormWork />
+          <CVFormEdu exampleClicked={this.props.exampleStatus} />
+          <CVFormWork exampleClicked={this.props.exampleStatus} />
         </div>
       </main>
     );
