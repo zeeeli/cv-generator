@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CVFormInput from "./CVFormInput";
 import CVFormWorkEntry from "./CVFormWorkEntry";
 
 export default class CVFormWork extends Component {

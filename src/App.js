@@ -7,10 +7,6 @@ import CVMain from "./components/CVMain";
 import CVFooter from "./components/CVFooter";
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div className="main">

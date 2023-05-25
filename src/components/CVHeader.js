@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import "./CVHeader.css";
 
 class CVHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { logo, size } = this.props;
     return (

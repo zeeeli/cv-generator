@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 export default class CVFormInput extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { defaultText, id, length, seed = "" } = this.props;
     if (seed !== "") {

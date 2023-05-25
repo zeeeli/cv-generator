@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../components/CVNav.css";
 
 class CVNav extends Component {
   render() {
