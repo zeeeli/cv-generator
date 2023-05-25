@@ -124,6 +124,7 @@ h3 {
 #education,
 #work-experience {
   min-height: 15%;
+  overflow: hidden;
 }
 
 .section-header {
