@@ -1,8 +1,38 @@
 import React, { Component } from "react";
 import CVFormInput from "./CVFormInput";
+import CVFormWorkEntry from "./CVFormWorkEntry";
 
 export default class CVFormWork extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      numChildren: 0,
+    };
+  }
+
+  addChild = () => {
+    if (this.state.numChildren < 3) {
+      this.setState({
+        numChildren: this.state.numChildren + 1,
+      });
+    }
+  };
+
+  removeChild = () => {
+    if (this.state.numChildren > 0) {
+      this.setState({
+        numChildren: this.state.numChildren - 1,
+      });
+    }
+  };
+
   render() {
+    const children = [];
+
+    for (let i = 0; i < this.state.numChildren; i++)
+      children.push(<CVFormWorkEntry />);
+
     return (
       <section id="work">
         <h3 className="section-header">
@@ -13,6 +43,7 @@ export default class CVFormWork extends Component {
             id="add-edu"
             style={{ width: 30, height: 30 }}
             title="Add to end"
+            onClick={this.addChild}
           />
           <img
             src={require("../assets/remove.png")}
@@ -20,61 +51,10 @@ export default class CVFormWork extends Component {
             id="remove-edu"
             style={{ width: 30, height: 30 }}
             title="Remove from end"
+            onClick={this.removeChild}
           />
         </h3>
-        <div id="work-body">
-          <div>
-            <CVFormInput
-              defaultText="Employer Name"
-              id="employer"
-              length={50}
-            />
-            <CVFormInput
-              defaultText="xxxx - xxxx"
-              id="years-worked"
-              length={25}
-            />
-            <textarea
-              rows={3}
-              placeholder="Short description"
-              id="job-descript"
-            />
-          </div>
-          <div>
-            <CVFormInput
-              defaultText="Employer Name"
-              id="employer"
-              length={50}
-            />
-            <CVFormInput
-              defaultText="xxxx - xxxx"
-              id="years-worked"
-              length={25}
-            />
-            <textarea
-              rows={3}
-              placeholder="Short description"
-              id="job-descript"
-            />
-          </div>
-          <div>
-            <CVFormInput
-              defaultText="Employer Name"
-              id="employer"
-              length={50}
-            />
-            <CVFormInput
-              defaultText="xxxx - xxxx"
-              id="years-worked"
-              length={25}
-            />
-            <textarea
-              rows={3}
-              placeholder="Short description"
-              id="job-descript"
-            />
-          </div>
-        </div>
+        <div id="work-body">{children}</div>
       </section>
     );
   }
