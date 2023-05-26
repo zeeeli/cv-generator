@@ -40,6 +40,23 @@ input[type="text"] {
   background-color: inherit;
   max-width: 580px;
 }
+::-moz-placeholder {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  opacity: 1;
+}
 
 ::placeholder {
   font-family: inherit;
@@ -47,6 +64,7 @@ input[type="text"] {
   font-size: inherit;
   font-weight: inherit;
   text-decoration: inherit;
+  opacity: 1;
 }
 
 #name-input {
