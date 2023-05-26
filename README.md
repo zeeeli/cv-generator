@@ -1,1 +1,3 @@
-TOP project: cv-generator
+# cv-generator
+
+[Try It](https://zeeeli.github.io/cv-generator/public/)
