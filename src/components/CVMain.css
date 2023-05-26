@@ -7,9 +7,9 @@
 }
 
 .cv-wrapper {
-  width: 850px;
-  height: 1100px;
-  border: 1px solid black;
+  width: 8.5in;
+  height: 11in;
+  /* border: 1px solid black; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   flex-direction: column;
@@ -134,12 +134,16 @@ h3 {
 }
 
 #add-edu,
-#remove-edu {
+#add-work,
+#remove-edu,
+#remove-work {
   cursor: pointer;
 }
 
 #add-edu:hover,
-#remove-edu:hover {
+#remove-edu:hover,
+#add-work:hover,
+#remove-work:hover {
   background-color: #e7e7e7;
   border-radius: 16px;
 }

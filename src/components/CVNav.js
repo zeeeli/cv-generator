@@ -7,7 +7,7 @@ class CVNav extends Component {
   render() {
     return (
       <div className="cv-nav">
-        <button>Print</button>
+        <button onClick={this.props.print}>Print</button>
         <button onClick={this.refreshPage}>Reset</button>
         <button onClick={this.props.exampleStatusHandler}>Example</button>
       </div>

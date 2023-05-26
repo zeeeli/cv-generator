@@ -3,6 +3,7 @@ import "./CVMain.css";
 import CVFormInput from "./CVFormInput";
 import CVFormEdu from "./CVFormEdu";
 import CVFormWork from "./CVFormWork";
+
 const imageTypes = ["jpg", "jpeg", "png", "svg", "webp"];
 
 export default class CVMain extends Component {
@@ -44,8 +45,9 @@ export default class CVMain extends Component {
 
   render() {
     let exampleClicked = this.props.exampleStatus;
+
     return (
-      <main className="main-wrapper">
+      <main className="main-wrapper" id="print-target">
         <div className="cv-wrapper">
           <header>
             <img

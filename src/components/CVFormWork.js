@@ -47,9 +47,9 @@ export default class CVFormWork extends Component {
           <img
             src={require("../assets/add.png")}
             alt="plus symbol"
-            id="add-edu"
+            id="add-work"
             style={
-              this.props.exampleClicked
+              this.props.exampleClicked || this.props.printClicked
                 ? { display: "none" }
                 : { width: 30, height: 30 }
             }
@@ -59,9 +59,9 @@ export default class CVFormWork extends Component {
           <img
             src={require("../assets/remove.png")}
             alt="minus symbol"
-            id="remove-edu"
+            id="remove-work"
             style={
-              this.props.exampleClicked
+              this.props.exampleClicked || this.props.printClicked
                 ? { display: "none" }
                 : { width: 30, height: 30 }
             }

@@ -16,7 +16,11 @@ class App extends Component {
   }
 
   changeExampleClicked = () => {
-    this.setState({ exampleClicked: true });
+    this.setState({ exampleClicked: !this.state.exampleClicked });
+  };
+
+  printClicked = () => {
+    window.print();
   };
 
   render() {
@@ -25,9 +29,21 @@ class App extends Component {
         <CVHeader logo={logoPath} size={160} />
 
         {/* <CVNav> contains reset, example, and print buttons */}
-        <CVNav exampleStatusHandler={this.changeExampleClicked} />
+        <CVNav
+          exampleStatusHandler={this.changeExampleClicked}
+          print={this.printClicked}
+        />
 
-        <span className="instruct">Click Element To Edit</span>
+        <span
+          className="instruct"
+          style={
+            this.state.exampleClicked
+              ? { visibility: "hidden" }
+              : { visibility: "visible" }
+          }
+        >
+          Click Element To Edit
+        </span>
 
         {/* <CVMain> contains CV */}
         <CVMain exampleStatus={this.state.exampleClicked}></CVMain>

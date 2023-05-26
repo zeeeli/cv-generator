@@ -1,5 +1,42 @@
-/*  src/App.css */
+/* src/App.css */
 /* CSS reset */
+@media print {
+  div {
+    page-break-inside: avoid !important;
+  }
+
+  .cv-header,
+  .cv-nav,
+  .instruct,
+  footer {
+    display: none !important;
+  }
+
+  #print-target,
+  #print-target * {
+    visibility: visible !important;
+    box-shadow: none;
+  }
+
+  #print-target {
+    padding: 0;
+    display: block;
+  }
+
+  #add-edu,
+  #remove-edu,
+  #add-work,
+  #remove-work {
+    display: none !important;
+  }
+}
+
+@page {
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
+}
 body,
 div,
 dl,
@@ -56,10 +93,8 @@ body {
   width: 100%;
   margin: inherit;
   padding: inherit;
-  /* background-color: #837a75; */
 }
 
-/* ./src/components/CVNav.css */
 .cv-nav {
   display: flex;
   flex-direction: row;
