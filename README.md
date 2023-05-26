@@ -1,3 +1,3 @@
 # cv-generator
 
-[Try It](https://zeeeli.github.io/cv-generator)
+[Try It](http://zeeeli.github.io/cv-generator)
