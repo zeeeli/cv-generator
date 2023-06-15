@@ -42,7 +42,7 @@ export default class CVFormWork extends Component {
 
     return (
       <section id="work">
-        <h3 className="section-header">
+        <h2 className="section-header">
           Work Experience
           <img
             src={require("../assets/add.png")}
@@ -68,7 +68,7 @@ export default class CVFormWork extends Component {
             title="Remove from end"
             onClick={this.removeChild}
           />
-        </h3>
+        </h2>
         <div id="work-body">{children}</div>
       </section>
     );

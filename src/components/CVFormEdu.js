@@ -38,7 +38,7 @@ export default class CVFormEdu extends Component {
 
     return (
       <section id="education">
-        <h3 className="section-header">
+        <h2 className="section-header">
           Education
           <img
             src={require("../assets/add.png")}
@@ -64,7 +64,7 @@ export default class CVFormEdu extends Component {
             title="Remove from end"
             onClick={this.removeChild}
           />
-        </h3>
+        </h2>
         <div id="edu-body">{children}</div>
       </section>
     );

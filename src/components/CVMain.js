@@ -59,12 +59,13 @@ export default class CVMain extends Component {
               alt="Profile"
               onClick={this.changeProfileSrc}
             />
-            <h2>
+            <figure>
               <CVFormInput
                 defaultText="First Last"
                 id="name-input"
                 length={21}
                 seed={exampleClicked ? "John Smith" : ""}
+                label="Name"
               />
               <br></br>
               <CVFormInput
@@ -72,8 +73,9 @@ export default class CVMain extends Component {
                 id="job-input"
                 length={23}
                 seed={exampleClicked ? "Head Chef" : ""}
+                label="Job role name"
               />
-            </h2>
+            </figure>
           </header>
           <section id="contact-info">
             <div>
@@ -83,6 +85,7 @@ export default class CVMain extends Component {
                 id="phone-input"
                 length={17}
                 seed={exampleClicked ? "+1 (123) 456-5555" : ""}
+                label="Phone number"
               />
             </div>
             <div>
@@ -92,6 +95,7 @@ export default class CVMain extends Component {
                 id="email-input"
                 length={25}
                 seed={exampleClicked ? "johnsmith@gmail.com" : ""}
+                label="email"
               />
             </div>
             <div>
@@ -101,11 +105,12 @@ export default class CVMain extends Component {
                 id="location-input"
                 length={20}
                 seed={exampleClicked ? "Los Angeles, CA, USA" : ""}
+                label="Home city with state and country"
               />
             </div>
           </section>
           <section id="about-me">
-            <h3>About Me</h3>
+            <h2>About Me</h2>
             <textarea
               rows={6}
               placeholder={
@@ -114,6 +119,7 @@ export default class CVMain extends Component {
                   : "..."
               }
               id="about-input"
+              aria-label="Text area for about me section"
             />
           </section>
           <CVFormEdu exampleClicked={this.props.exampleStatus} />

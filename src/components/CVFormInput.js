@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class CVFormInput extends Component {
   render() {
-    const { defaultText, id, length, seed = "" } = this.props;
+    const { defaultText, id, length, seed = "", label } = this.props;
     if (seed !== "") {
       return (
         <input
@@ -11,6 +11,7 @@ export default class CVFormInput extends Component {
           maxLength={length}
           placeholder={seed}
           autoComplete="off"
+          aria-label={label}
         />
       );
     } else {
@@ -22,6 +23,7 @@ export default class CVFormInput extends Component {
           id={id}
           maxLength={length}
           autoComplete="off"
+          aria-label={label}
         />
       );
     }
