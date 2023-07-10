@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/cv-generator/static/css/main.71a4fb5f.css",
-    "main.js": "/cv-generator/static/js/main.5c878c7b.js",
+    "main.js": "/cv-generator/static/js/main.25471566.js",
     "static/js/787.e7cea540.chunk.js": "/cv-generator/static/js/787.e7cea540.chunk.js",
-    "static/media/Swedish-chef.webp": "/cv-generator/static/media/Swedish-chef.c5cb4a519fedd526b03b.webp",
+    "static/media/default-man.png": "/cv-generator/static/media/default-man.1804804a9dc2e55523bf.png",
     "static/media/ResumeLogo.png": "/cv-generator/static/media/ResumeLogo.18268fb2a58c488d0ab8.png",
     "static/media/user-profile.png": "/cv-generator/static/media/user-profile.92da51c83f0c757a3d48.png",
     "index.html": "/cv-generator/index.html",
     "main.71a4fb5f.css.map": "/cv-generator/static/css/main.71a4fb5f.css.map",
-    "main.5c878c7b.js.map": "/cv-generator/static/js/main.5c878c7b.js.map",
+    "main.25471566.js.map": "/cv-generator/static/js/main.25471566.js.map",
     "787.e7cea540.chunk.js.map": "/cv-generator/static/js/787.e7cea540.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71a4fb5f.css",
-    "static/js/main.5c878c7b.js"
+    "static/js/main.25471566.js"
   ]
 }
