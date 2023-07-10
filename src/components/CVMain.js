@@ -53,7 +53,7 @@ export default class CVMain extends Component {
             <img
               src={
                 exampleClicked
-                  ? require("../assets/Swedish-chef.webp")
+                  ? require("../assets/default-man.png")
                   : this.state.profileSrc
               }
               alt="Profile"
